@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,6 +8,10 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
+import { CarroselComponent } from './carrosel/carrosel.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     MenuComponent,
     RodapeComponent,
     EntrarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    InicioComponent,
+    CarroselComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
